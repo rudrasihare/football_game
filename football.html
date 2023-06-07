@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Task UI</h1>
+    </header>
+    
+    <img src="img/football.png" alt="football" id="image">
+    
+    <div >
+        <input type="button" onClick=move_img('left') value='Left'>
+        <input type="button" onClick=move_img('center') value='Center'>
+        <input type="button" onClick=move_img('right') value='Right'>
+        
+    </div>
+
+    <script>
+        function move_img(str){
+            var step=50;
+            switch(str){
+
+                case 'left':
+                var  x =document.getElementById('image').offsetLeft;
+                x=x-step;
+                document.getElementById('image').style.left = x+'px';
+                break;
+
+                case 'right':
+                var  x =document.getElementById('image').offsetLeft;
+                x=x+step;
+                document.getElementById('image').style.left = x+'px';
+                break;
+
+                case 'center':
+                var  x =document.getElementById('image').offsetLeft;
+                x=670
+                document.getElementById('image').style.left = x+'px';
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
